@@ -121,6 +121,10 @@ musicdirectory=configuration['Kodi']['musicdirectory']
 videodirectory=configuration['Kodi']['videodirectory']
 windowcmd=configuration['Kodi']['windowcmd']
 window=configuration['Kodi']['window']
+if configuration['Kodi']['Kodi_Control']=='Enabled':
+    kodicontrol=True
+else:
+    kodicontrol=False
 
 if GPIO!=None:
     GPIO.setmode(GPIO.BCM)
@@ -1595,7 +1599,7 @@ def Action(phrase):
 ###########PREVIOUSLY WAS THE PART OF main.py and pushbutton.py#################
 ################################################################################
 #Check for keywords in scripts to execute Custom Actions
-def custom_action(command,boardtype):
+def custom_action(usrcmd,boardtype):
     if configuration['DIYHUE']['DIYHUE_Control']=='Enabled':
         if os.path.isfile('/opt/hue-emulator/config.json'):
             with open('/opt/hue-emulator/config.json', 'r') as config:
