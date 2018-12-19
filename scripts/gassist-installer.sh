@@ -147,7 +147,7 @@ fi
 if [[ $devmodel = "armv7" ]];then
 	pip install google-assistant-library==1.0.0
 else
-  pip install --upgrade --no-binary :all: grpcio
+  pip install --upgrade --only-binary :all: grpcio
 fi
 
 pip install google-assistant-grpc==0.2.0

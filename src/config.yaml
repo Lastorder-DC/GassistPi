@@ -2,7 +2,7 @@
 
 #Custom conversation. Add your queries and expected assistant response. Do not add symbols or special charecters.
 Conversation:
-  Conversation_Control: 'Enabled'
+  Conversation_Control: 'Disabled'
   question:
     1:
       - 'Who are you'
@@ -19,12 +19,12 @@ Conversation:
 
 # Deezer user credentials
 Deezer:
-  Deezer_Control: 'Enabled'
+  Deezer_Control: 'Disabled'
   User_id: '2247762504'
 
 # DIY-HUE declarations
 DIYHUE:
-  DIYHUE_Control: 'Enabled'
+  DIYHUE_Control: 'Disabled'
 
 # Domoticz declarations
 Domoticz:
@@ -50,7 +50,7 @@ Domoticz:
 
 #ESP control declarations. Follow a similar pattern to add your own list.
 ESP:
-  ESP_Control: 'Enabled'
+  ESP_Control: 'Disabled'
   IP: 'xxxxxxxxxxxx' #Enter your ESP's IP here.
   devicename:
     - 'Device 1'
@@ -63,7 +63,7 @@ ESP:
 
 #Streaming songs from Gaana.com
 Gaana:
-  Gaana_Control: 'Enabled'
+  Gaana_Control: 'Disabled'
   Playlist:
     # Enter your desired playlists
     - 'https://gaana.com/playlist/gaana-dj-bollywood-top-50-1'
@@ -71,7 +71,7 @@ Gaana:
 
 #Enter your Google Login Credentials
 Gmusicapi:
-  Gmusic_Control: 'Enabled'
+  Gmusic_Control: 'Disabled'
   #If you are using two-step authentication, use app specific password. For guidelines, go through README
   email: 'ENTER_YOUR_EMAIL_HERE'
   password: 'ENETER_YOUR_PASSWORD'
@@ -140,7 +140,7 @@ Mmmip: 'ENTER_YOUR_MAGIC_MIRROR_IP'
 #Radio station declarations. Follow a similar pattern to add your own stations.
 #Google may not pickup the pronunciation of radio station names, hence 'Radio 1' etc is required.
 Radio_stations:
-  Radio_Control: 'Enabled'
+  Radio_Control: 'Disabled'
   stationnames:
     - 'Radio 1'
     - 'Radio 2'
@@ -165,7 +165,7 @@ Radio_stations:
 
 #Pi GPIO control declarations. Follow a similar pattern to add your own list of GPIOs
 Raspberrypi_GPIO_Control:
-  GPIO_Control: 'Enabled'
+  GPIO_Control: 'Disabled'
   lightnames:
     - 'kitchen lights'
     - 'bathroom lights'
@@ -173,14 +173,14 @@ Raspberrypi_GPIO_Control:
 
 #Spotify credentials. Register for a spotify developer and get the credentials.
 Spotify:
-  Spotify_Control: 'Enabled'
+  Spotify_Control: 'Disabled'
   client_id: 'ENTER YOUR SPOTIFY CLIENT ID HERE'
   client_secret: 'ENTER YOUR SPOTIFY CLIENT SECRET HERE'
   username: 'ENTER YOUR SPOTIFY USERNAME HERE'
 
 #Enter your Tasmota Device details below
 Tasmota_devicelist:
-  Tasmota_Control: 'Enabled'
+  Tasmota_Control: 'Disabled'
   friendly-names:
     - 'Desk Light'
     - 'Table Light'
@@ -201,8 +201,7 @@ Wakewords:
   Ok_Google: 'Enabled'
   Custom_Wakeword: 'Enabled'
   Custom_wakeword_models:
-    - '/home/pi/GassistPi/src/resources/alexa.umdl'
-    - '/home/pi/GassistPi/src/resources/snowboy.umdl'
+    - '/home/pi/GassistPi/src/resources/heyrobo.umdl'
 
 YouTube:
-  YouTube_Control: 'Enabled'
+  YouTube_Control: 'Disabled'

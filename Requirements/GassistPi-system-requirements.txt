@@ -33,3 +33,4 @@ zlib1g-dev
 espeak
 sox
 libsox-fmt-mp3
+espeak-ng
