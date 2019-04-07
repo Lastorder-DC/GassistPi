@@ -642,6 +642,32 @@ class Myassistant():
         return self.singledetectedresponse
 
     def custom_command(self,usrcmd):
+        try:
+            if "앞으로" in str(usrcmd).lower():
+                print("앞으로 갑니다")
+                requests.get("http://127.0.0.1:8088/forward?key=r0bogram")
+            if "뒤로" in str(usrcmd).lower():
+                print("뒤로 갑니다")
+                requests.get("http://127.0.0.1:8088/backward?key=r0bogram")
+            if "왼쪽" in str(usrcmd).lower():
+                print("왼쪽으로 갑니다")
+                requests.get("http://127.0.0.1:8088/left?key=r0bogram")
+                sleep(0.75)
+                requests.get("http://127.0.0.1:8088/stop?key=r0bogram")
+            if "오른쪽" in str(usrcmd).lower():
+                print("오른쪽으로 갑니다")
+                requests.get("http://127.0.0.1:8088/right?key=r0bogram")
+                sleep(0.75)
+                requests.get("http://127.0.0.1:8088/stop?key=r0bogram")
+            if "멈춰" in str(usrcmd).lower():
+                print("멈춥니다")
+                requests.get("http://127.0.0.1:8088/stop?key=r0bogram")
+            if "그만" in str(usrcmd).lower():
+                print("멈춥니다")
+                self.assistant.stop_conversation()
+                requests.get("http://127.0.0.1:8088/stop?key=r0bogram")
+        except Exception:
+            say("연결 오류")
         if configuration['DIYHUE']['DIYHUE_Control']=='Enabled':
             if os.path.isfile('/opt/hue-emulator/config.json'):
                 with open('/opt/hue-emulator/config.json', 'r') as config:
